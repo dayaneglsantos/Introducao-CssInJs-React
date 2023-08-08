@@ -1,5 +1,6 @@
-// A imporação do styled é fora das chaves pois styles é exportado como default
 import styled, { createGlobalStyle } from 'styled-components'
+
+import { Theme } from './Themes/dark'
 
 const EstiloGlobal = createGlobalStyle`
   * {
@@ -13,6 +14,7 @@ const EstiloGlobal = createGlobalStyle`
   body {
     padding-top: 80px;
     padding-bottom: 80px;
+    background-color: ${(props) => (props.theme as Theme).corFundo};
 
 
     @media (max-width:768px) {
@@ -33,9 +35,5 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     display: block;
     width: 80%;
-  }
-
-  img {
-    max-width: 100%;
   }
 `

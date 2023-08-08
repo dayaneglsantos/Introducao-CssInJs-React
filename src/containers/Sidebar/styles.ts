@@ -8,11 +8,11 @@ export const Descricao = styled(P)`
 
 export const BotaoTema = styled.button`
   border-radius: 12px;
-  background-color: #282a35;
+  background-color: ${(props) => props.theme.corFontePrincipal};
   font-size: 10px;
   font-weight: bold;
   padding: 8px;
-  color: #fff;
+  color: ${(props) => props.theme.corFundo};
   cursor: pointer;
 `
 
@@ -20,4 +20,9 @@ export const SidebarContainer = styled.div`
   position: sticky;
   top: 80px;
   left: 0;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 `
