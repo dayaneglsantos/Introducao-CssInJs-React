@@ -1,9 +1,12 @@
-// Utilizamos o children pois somente assim conseguimos associar ao que está dentro da tag Titulo. Caso contrario teriamos que passar o valor como uma propriedade.
-type Props = {
+import { Titulo as EstiloTitulo } from './styles'
+
+export type Props = {
   children: string
+  fontSize?: number
 }
 
-// Para melhor entendimento: (props: Props) --> props recebe as tipagens de Props
-const Titulo = (props: Props) => <span>{props.children}</span>
+const Titulo = (props: Props) => (
+  <EstiloTitulo fontSize={props.fontSize}>{props.children}</EstiloTitulo>
+)
 
 export default Titulo
