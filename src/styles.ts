@@ -7,10 +7,13 @@ const EstiloGlobal = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
+    list-style: none;
   }
 
   body {
-    padding-top: 80px
+    padding-top: 80px;
+    padding-bottom: 80px;
+
 
     @media (max-width:768px) {
       padding-top: 16px;
